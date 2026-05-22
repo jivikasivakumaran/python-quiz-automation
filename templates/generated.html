@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Quiz Template</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Handlee&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700&family=Waterfall&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#111;
+    font-family:'Piazzolla', serif;
+}
+
+.quiz-container{
+    width:720px;
+    height:1280px;
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+
+    background:linear-gradient(
+        180deg,
+        #3431c6 0%,
+        rgba(52,49,198,0.65) 10%,
+        rgba(51,51,51,0.7) 95%
+    );
+}
+
+/* TOP BAR */
+
+.top-bar{
+    position:absolute;
+    top:30px;
+    left:50%;
+    transform:translateX(-50%);
+    width:72%;
+    height:70px;
+    background:rgba(255,255,255,0.45);
+    border-radius:50px;
+    backdrop-filter:blur(10px);
+}
+
+/* DAY TEXT */
+
+.day{
+    position:absolute;
+    top:25px;
+    left:200px;
+    font-size:55px;
+    color:#000;
+    font-weight:bold;
+}
+
+/* QUESTION */
+
+.question{
+    position:absolute;
+    top:130px;
+    left:30px;
+    color:white;
+    font-size:52px;
+    line-height:1.2;
+    font-family: 'Piazzolla', serif;
+}
+
+/* LOGO */
+
+.logo{
+    position:absolute;
+    top:120px;
+    right:30px;
+    width:180px;
+}
+
+/* CODE IMAGE */
+
+.code-image{
+    position:absolute;
+    top:300px;
+    left:45%;
+    transform:translateX(-50%);
+    width:80%;
+    border-radius:20px;
+}
+
+/* OPTIONS */
+
+.option{
+    position:absolute;
+    width:80%;
+    height:80px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#33395c;
+    border-radius:50px;
+    display:flex;
+    align-items:center;
+    padding-left:30px;
+    color:white;
+    font-size:45px;
+}
+
+.option-label{
+    width:80px;
+    height:80px;
+    border-radius:50px;
+    background:#575757;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:30px;
+    margin-left:-30px;
+    font-weight:bold;
+    top: -2px;
+}
+
+/* OPTION POSITIONS */
+
+.option1{ top:700px; }
+.option2{ top:800px; }
+.option3{ top:900px; }
+.option4{ top:1000px; }
+
+.comment-text{
+    position:absolute;
+    top:1115px;
+    width:100%;
+    text-align:center;
+    font-size:38px;
+    color:white;
+    font-family:'Piazzolla', serif;
+    
+}
+
+/* FOOTER */
+
+.footer{
+      position:absolute;
+      bottom:30px;
+      width:100%;
+
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      padding-right: 120px;
+    }
+
+    .footer-text{
+      font-family:'Handlee', cursive;
+      font-size:30px;
+      color:#6ea3ff;
+    }
+
+    /* SMALL LOGO */
+
+    .small-logo{
+      position:absolute;
+      right:20px;
+      bottom:-15px;
+      width:90px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="quiz-container">
+
+    <div class="top-bar"></div>
+
+    <div class="day">
+        DAY: 28/100
+    </div>
+
+    <div class="question">
+        Find the output <br>
+        for this program
+    </div>
+
+    <!-- Replace with your logo -->
+    <img class="logo" src="logo.png" alt="Logo">
+
+    <!-- Replace with code screenshot -->
+    <img class="code-image" src="file:///D:/my_work/python_quizz_reels/assets/questions/output10.png" alt="Code">
+
+    <!-- OPTIONS -->
+
+    <div class="option option1">
+        <div class="option-label">A</div>
+        4
+    </div>
+
+    <div class="option option2">
+        <div class="option-label">B</div>
+        5
+    </div>
+
+    <div class="option option3">
+        <div class="option-label">C</div>
+        6
+    </div>
+
+    <div class="option option4">
+        <div class="option-label">D</div>
+        Error
+    </div>
+    <div class="comment-text">
+        DROP UR ANSWER IN COMMENT👇
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+        <img class="small-logo" src="instagram.png" alt="">
+        <span class="footer-text">@quizz_python</span>
+    </div>
+
+</div>
+
+</body>
+</html>

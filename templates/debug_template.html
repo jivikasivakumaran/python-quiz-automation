@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Quiz</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Handlee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700&family=Waterfall&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#111;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      font-family:'Piazzolla', serif;
+    }
+
+    .container{
+      width:720px;
+      height:1280px;
+      position:relative;
+      overflow:hidden;
+
+      background:linear-gradient(
+        to bottom,
+        #5d2ed3,
+        #3b0457
+      );
+    }
+
+    /* =========================
+        TOP DAY BAR
+    ========================== */
+
+    .day-bar{
+      position:absolute;
+      top:45px;
+      left:50%;
+      transform:translateX(-50%);
+
+      width:78%;
+      height:115px;
+
+      background:#372768;
+      border-radius:70px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      color:white;
+      font-size:72px;
+      letter-spacing:2px;
+    }
+
+    /* =========================
+        PYTHON LOGO
+    ========================== */
+
+    .python-logo{
+      position:absolute;
+      top:160px;
+      right:15px;
+
+      width:135px;
+    }
+
+    /* =========================
+        QUESTION BOX
+    ========================== */
+
+    .question-box{
+      position:absolute;
+
+      top:290px;
+      left:50%;
+      transform:translateX(-50%);
+
+      width:86%;
+      height:230px;
+
+      background:#372768;
+      border-radius:60px;
+
+      padding-left:35px;
+      padding-right:35px;
+    }
+
+    .question{
+      position:relative;
+      top:20px;
+
+      color:#f2c0cf;
+
+      font-size:52px;
+      line-height:1.45;
+
+      text-transform:uppercase;
+    }
+
+    /* =========================
+        CODE IMAGE
+    ========================== */
+
+    .code-image{
+      position:absolute;
+
+      top:620px;
+      left:50%;
+      transform:translateX(-50%);
+
+      width:530px;
+      border-radius:10px;
+    }
+
+    /* =========================
+        COMMENT TEXT
+    ========================== */
+
+    .comment{
+      position:absolute;
+
+      bottom:125px;
+      width:100%;
+
+      text-align:center;
+
+      color:white;
+
+      font-family:'Piazzolla', serif;
+      font-size:58px;
+      line-height:1.4;
+    }
+
+    /* =========================
+        FOOTER
+    ========================== */
+
+    .footer{
+      position:absolute;
+
+      bottom:20px;
+      width:100%;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .footer-text{
+      position:relative;
+      left:120px;
+
+      font-family:'Handlee', cursive;
+      font-size:45px;
+
+      color:#6ea3ff;
+    }
+
+    /* =========================
+        SMALL QUIZZ LOGO
+    ========================== */
+
+    .quiz-logo{
+      position:absolute;
+
+      right:10px;
+      bottom:10px;
+
+      width:90px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- DAY BAR -->
+
+    <div class="day-bar">
+      {{DAY}}
+    </div>
+
+    <!-- PYTHON LOGO -->
+
+    <img 
+      src="logo.png" 
+      alt="Python Logo"
+      class="python-logo"
+    >
+
+    <!-- QUESTION BOX -->
+
+    <div class="question-box">
+
+      <div class="question">
+        What is wrong<br>
+        with this code?
+      </div>
+
+    </div>
+
+    <!-- CODE IMAGE -->
+
+    <img class="code-image" src="{{QUESTION_IMAGE}}" alt="Code Image">
+
+    <!-- COMMENT TEXT -->
+
+    <div class="comment">
+      DROP UR ANSWER<br> 
+      IN COMMENT👇
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+      <div class="footer-text">
+        @quizz_python
+      </div>
+
+    </div>
+
+    <!-- QUIZZ LOGO -->
+
+    <img
+      src="instagram.png"
+      alt="Quiz Logo"
+      class="quiz-logo"
+    >
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Quiz</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Handlee&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@400;700&family=Waterfall&display=swap" rel="stylesheet">
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:#111;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      min-height:100vh;
+      font-family:'Cinzel', serif;
+    }
+
+    .container{
+      width:720px;
+      height:1280px;
+      background:linear-gradient(to bottom,#5b2ccf,#3d0457);
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* DAY BAR */
+
+    .day-bar{
+      position:absolute;
+      top:30px;
+      left:50%;
+      transform:translateX(-50%);
+      width:78%;
+      height:120px;
+      background:#372768;
+      border-radius:70px;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      color:white;
+      font-size:70px;
+      letter-spacing:2px;
+    }
+
+    /* QUESTION BOX */
+
+    .question-box{
+      position:absolute;
+      top:180px;
+      left:50%;
+      transform:translateX(-50%);
+      width:92%;
+      height:320px;
+      background:#372768;
+      border-radius:60px;
+
+      padding:40px;
+    }
+
+    .question{
+      color:#f0c3cf;
+      font-size:45px;
+      line-height:1.45;
+      text-transform:uppercase;
+      position:relative;
+      top:-20px;
+    }
+
+    /* PYTHON LOGO */
+
+    .python-logo{
+      position:absolute;
+      right:25px;
+      top:500px;
+      width:140px;
+    }
+
+    /* OPTIONS */
+
+    .option{
+      width:75%;
+      height:90px;
+      background:#372768;
+      border-radius:50px;
+
+      display:flex;
+      align-items:center;
+
+      position:absolute;
+      left:45%;
+      transform:translateX(-50%);
+    }
+
+    .option-label{
+      width:100px;
+      height:100px;
+      background:#514a63;
+      border-radius:50%;
+
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      color:#d8b0be;
+      font-size:45px;
+
+      position:relative;
+      left:-10px;
+      top:-2px;
+    }
+
+    .option-text{
+      color:#f0c3cf;
+      font-size:45px;
+      margin-left:15px;
+    }
+
+    /* OPTION POSITIONS */
+
+    .option1{
+      top:620px;
+    }
+
+    .option2{
+      top:740px;
+    }
+
+    .option3{
+      top:860px;
+    }
+
+    .option4{
+      top:980px;
+    }
+
+    /* COMMENT TEXT */
+
+    .comment{
+      position:absolute;
+      bottom:100px;
+      width:100%;
+      text-align:center;
+
+      color:white;
+      font-size:38px;
+      font-family:'Piazzolla', serif;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      position:absolute;
+      bottom:30px;
+      width:100%;
+
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      padding-right: 120px;
+    }
+
+    .footer-text{
+      font-family:'Handlee', cursive;
+      font-size:30px;
+      color:#6ea3ff;
+    }
+
+    /* SMALL LOGO */
+
+    .small-logo{
+      position:absolute;
+      right:20px;
+      bottom:10px;
+      width:90px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- DAY -->
+
+    <div class="day-bar">
+      {{DAY}}
+    </div>
+
+    <!-- QUESTION -->
+
+    <div class="question-box">
+      <div class="question">
+        {{QUESTION_TEXT}}
+      </div>
+    </div>
+
+    <!-- PYTHON IMAGE -->
+
+    <img src="logo.png" class="python-logo">
+
+    <!-- OPTIONS -->
+
+    <div class="option option1">
+      <div class="option-label">A</div>
+      <div class="option-text">{{OPTION_A}}</div>
+    </div>
+
+    <div class="option option2">
+      <div class="option-label">B</div>
+      <div class="option-text">{{OPTION_B}}</div>
+    </div>
+
+    <div class="option option3">
+      <div class="option-label">C</div>
+      <div class="option-text">{{OPTION_C}}</div>
+    </div>
+
+    <div class="option option4">
+      <div class="option-label">D</div>
+      <div class="option-text">{{OPTION_D}}</div>
+    </div>
+
+    <!-- COMMENT -->
+
+    <div class="comment">
+      DROP UR ANSWER IN COMMENT👇
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+      <div class="footer-text">@quizz_python</div>
+    </div>
+
+    <!-- SMALL LOGO -->
+
+    <img src="instagram.png" class="small-logo">
+
+  </div>
+
+</body>
+</html>
