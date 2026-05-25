@@ -15,6 +15,8 @@ async function generateHTML() {
   console.log(process.env.GOOGLE_CREDENTIALS ? 'Credentials found' : 'Credentials missing');
 
   const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+  console.log(credentials.client_email);
+  console.log(credentials.project_id);
 
   const auth = new google.auth.JWT(
     credentials.client_email,
