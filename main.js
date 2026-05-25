@@ -16,6 +16,14 @@ try {
 }
 catch (error) {
 
-  console.log('Error:', error);
+  console.log('Error:', error.message);
+
+  if (error.stdout) {
+    console.log('STDOUT:', error.stdout.toString());
+  }
+
+  if (error.stderr) {
+    console.log('STDERR:', error.stderr.toString());
+  }
 
 }
