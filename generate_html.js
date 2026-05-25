@@ -14,16 +14,18 @@ async function generateHTML() {
 
   console.log(process.env.GOOGLE_CREDENTIALS ? 'Credentials found' : 'Credentials missing');
 
-  const auth = new google.auth.GoogleAuth({
-    keyFile: JSON.parse(process.env.GOOGLE_CREDENTIALS),
-    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
-  });
+  const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
 
-  const client = await auth.getClient();
+  const auth = new google.auth.JWT(
+    credentials.client_email,
+    null,
+    credentials.private_key,
+    ['https://www.googleapis.com/auth/spreadsheets']
+  );
 
   const sheets = google.sheets({
     version: 'v4',
-    auth: client,
+    auth,
   });
 
   const spreadsheetId = '1KeuH8-8uNETIn6KqMWYgH9zVO7p6O1BD_UdtQWXs1R8';
