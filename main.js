@@ -1,15 +1,23 @@
 const { execSync } = require('child_process');
 
+
 try {
 
+  
   console.log('Generating HTML...');
-  execSync('node generate_html.js', { stdio: 'inherit' });
 
+  const output = execSync('node generate_html.js', {
+    encoding: 'utf-8'
+  });
+
+  console.log(output);
   console.log('Capturing screenshot...');
-  execSync('node capture.js', { stdio: 'inherit' });
+  const captureOutput = execSync('node capture.js', { encoding: 'utf-8' });
+  console.log(captureOutput);
 
   console.log('Creating reel...');
-  execSync('create_video.bat', { stdio: 'inherit' });
+  const videoOutput = execSync('create_video.bat', { stdio: 'inherit' });
+  console.log(videoOutput); 
 
   console.log('Reel created successfully!');
 

@@ -1,5 +1,7 @@
+console.log('Starting Python Quiz Automation...');
 const fs = require('fs');
 const { google } = require('googleapis');
+
 
 function escapeHTML(text) {
   return String(text)
@@ -9,6 +11,8 @@ function escapeHTML(text) {
 }
 
 async function generateHTML() {
+
+  console.log(process.env.GOOGLE_CREDENTIALS ? 'Credentials found' : 'Credentials missing');
 
   const auth = new google.auth.GoogleAuth({
     keyFile: JSON.parse(process.env.GOOGLE_CREDENTIALS),
