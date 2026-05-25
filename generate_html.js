@@ -71,6 +71,11 @@ async function generateHTML() {
 
   // READ TEMPLATE
   let html = fs.readFileSync(templateFile, 'utf8');
+  const pythonURL=`https://raw.githubusercontent.com/jivikasivakumaran/python-quiz-automation/main/assets/logo.png`;
+  const instagramURL=`https://raw.githubusercontent.com/jivikasivakumaran/python-quiz-automation/main/assets/instagram.png`;
+
+  html = html.replace('{{PYTHON_LOGO}}', pythonURL);
+  html = html.replace('{{INSTAGRAM_LOGO}}', instagramURL);
 
   // COMMON
   html = html.replace('{{DAY}}', `DAY: ${rowIndex}/100`);
@@ -79,7 +84,7 @@ async function generateHTML() {
   if (templateType === 'output') {
 
     const imagePath =
-      `file:///D:/my_work/python_quizz_reels/assets/questions/${question}`;
+      `https://raw.githubusercontent.com/jivikasivakumaran/python-quiz-automation/main/assets/questions/${question}`;
 
     html = html.replace('{{QUESTION_IMAGE}}', imagePath);
 
@@ -104,7 +109,7 @@ async function generateHTML() {
   else if (templateType === 'debug') {
 
     const imagePath =
-      `file:///D:/my_work/python_quizz_reels/assets/questions/${question}`;
+      `https://raw.githubusercontent.com/jivikasivakumaran/python-quiz-automation/main/assets/questions/${question}`;
 
     html = html.replace('{{QUESTION_IMAGE}}', imagePath);
   }
