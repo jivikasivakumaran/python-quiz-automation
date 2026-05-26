@@ -18,6 +18,25 @@ async function generateHTML() {
   console.log(credentials.client_email);
   console.log(credentials.project_id);
 
+  const { GoogleAuth } = require('google-auth-library');
+
+  const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
+
+  // Fix Railway newline issue
+  credentials.private_key = credentials.private_key.replace(/\\n/g, '\n');
+
+  const auth = new GoogleAuth({
+    credentials,
+    scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+  });
+
+  const client = await auth.getClient();
+
+  const sheets = google.sheets({
+    version: 'v4',
+    auth: client,
+  });
+
   const auth = new google.auth.JWT(
     credentials.client_email,
     null,
