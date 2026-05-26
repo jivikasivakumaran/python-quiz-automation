@@ -12,7 +12,11 @@ const puppeteer = require('puppeteer');
     height: 1920
   });
 
-  await page.goto('file:///D:/my_work/python_quizz_reels/templates/generated.html');
+  const path = require('path');
+
+  const filePath = 'file://' + path.join(__dirname, 'templates', 'generated.html');
+
+  await page.goto(filePath);
 
   await page.screenshot({
     path: 'output/output.png'
