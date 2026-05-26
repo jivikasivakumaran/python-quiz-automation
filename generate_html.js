@@ -14,9 +14,6 @@ async function generateHTML() {
 
   console.log(process.env.GOOGLE_CREDENTIALS ? 'Credentials found' : 'Credentials missing');
 
-  const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS);
-  console.log(credentials.client_email);
-  console.log(credentials.project_id);
 
   const { GoogleAuth } = require('google-auth-library');
 
@@ -37,17 +34,6 @@ async function generateHTML() {
     auth: client,
   });
 
-  const auth = new google.auth.JWT(
-    credentials.client_email,
-    null,
-    credentials.private_key,
-    ['https://www.googleapis.com/auth/spreadsheets']
-  );
-
-  const sheets = google.sheets({
-    version: 'v4',
-    auth,
-  });
 
   const spreadsheetId = '1KeuH8-8uNETIn6KqMWYgH9zVO7p6O1BD_UdtQWXs1R8';
 
