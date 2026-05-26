@@ -17,9 +17,11 @@ try {
 
   console.log('Creating reel...');
 
-  execSync('sh create_video.sh', { stdio: 'inherit' });
+  const videoOutput = execSync('sh create_video.sh', {
+    encoding: 'utf-8'
+  });
+
   
-  console.log(videoOutput);
 
   console.log('Reel created successfully!');
 
