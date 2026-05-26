@@ -17,16 +17,8 @@ try {
 
   console.log('Creating reel...');
 
-  const videoOutput = execSync(`
-  ffmpeg -loop 1 -i output.png -i assets/music/music.mp3 \
-  -c:v libx264 -t 10 -pix_fmt yuv420p \
-  -vf scale=720:1280 \
-  -shortest assets/output/reel.mp4
-  `, {
-    encoding: 'utf-8',
-    shell: true
-  });
-
+  execSync('sh create_video.sh', { stdio: 'inherit' });
+  
   console.log(videoOutput);
 
   console.log('Reel created successfully!');
