@@ -8,3 +8,5 @@ ffmpeg -loop 1 -i output.png -i assets/music/music.mp3 \
 -shortest assets/output/reel.mp4
 
 echo "Video created!"
+
+ls assets/output
